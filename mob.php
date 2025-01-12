@@ -64,7 +64,7 @@ a:
 $hh = 10;
 while(true):
 unlink('cookie.txt');
-$ip = $nam[$hh];
+$ip = $ht[$hh];
 $proxy = $ip;
 $proxy_parts = explode(":", $proxy);
 $proxy_ip = $proxy_parts[0];

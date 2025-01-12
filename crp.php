@@ -63,7 +63,7 @@ $nam = explode("\n" ,$result);
 
 
 a:
-$hh = 10;
+$hh = 0;
 while(true):
 unlink('cookie.txt');
 $ip = $nam[$hh];

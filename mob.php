@@ -56,7 +56,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $ua);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
 $result = curl_exec($ch);
-$nam = explode("\n" ,$result);
+$ht = explode("\n" ,$result);
 
 
 

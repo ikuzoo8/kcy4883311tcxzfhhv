@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-RUN apt update && apt install -y wget ca-certificates && rm -rf /var/lib/apt/lists/* 
+#RUN apt update && apt install -y wget ca-certificates && rm -rf /var/lib/apt/lists/* 
 
 # 设置工作目录
 WORKDIR /app

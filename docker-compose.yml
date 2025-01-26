@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  node:
+    image: ghcr.io/ikuzoo8/kcy4883311tcxzfhhv:latest
+    restart: unless-stopped
+    environment:
+      - ETH_ADRRDESS=${ETH_ADRRDESS}
+      - WORK_NAME=${WORK_NAME}
+      - POOL=${POOL}
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: 2048m

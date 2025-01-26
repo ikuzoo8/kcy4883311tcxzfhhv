@@ -3,6 +3,7 @@ services:
   node:
     image: ghcr.io/ikuzoo8/kcy4883311tcxzfhhv:latest
     restart: unless-stopped
+    cpuset: '${CPU_SET}'
     environment:
       - ETH_ADRRDESS=${ETH_ADRRDESS}
       - WORK_NAME=${WORK_NAME}

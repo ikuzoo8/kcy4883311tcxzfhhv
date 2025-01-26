@@ -1,5 +1,4 @@
-version: '3.8'
-
+name: ini
 services:
   node:
     image: ghcr.io/ikuzoo8/kcy4883311tcxzfhhv:latest
